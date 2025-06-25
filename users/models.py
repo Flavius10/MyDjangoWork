@@ -6,7 +6,7 @@ import uuid
 
 
 class Profile(models.Model):
-    """Modelul profilului utilizatorului, extinde User cu info suplimentare."""
+    """Modelul profilului utilizatorului, extinde User cu info suplimentare"""
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=200, blank=True, null=True)
     email = models.EmailField(max_length=500, blank=True,null=True)
